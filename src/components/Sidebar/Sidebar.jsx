@@ -1,5 +1,14 @@
 import React from "react";
 
+// import icons from react-icons
+import { IoHome } from "react-icons/io5";
+import { FaFileSignature } from "react-icons/fa6";
+import { IoCalendar } from "react-icons/io5";
+import { HiClipboardDocument } from "react-icons/hi2";
+import { IoMdAnalytics } from "react-icons/io";
+import { BsPersonCircle } from "react-icons/bs";
+import { TbLogout2 } from "react-icons/tb";
+
 export default function Sidebar() {
     return (
         <div className="flex min-h-full flex-col bg-white pb-10 shadow-2xl shadow-white/5 transition-all dark:!bg-navy-800 dark:text-white md:!z-50 lg:!z-50 xl:!z-0 translate-x-0">
@@ -24,37 +33,98 @@ export default function Sidebar() {
                     ></path>
                 </svg>
             </span>
-            <div className="mx-[56px] mt-[50px] flex items-center">
-                <div className="mt-1 ml-1 h-2.5 text-[26px] font-bold uppercase text-white">
-                    Horizon <span className="font-medium">FREE</span>
+            <div className="mx-[56px] mt-[32px] flex items-center">
+                <div className="mt-1 ml-2 flex justify-center items-center">
+                    <img
+                        src="/assets/logo/worknest-logo2.png"
+                        alt="Worknest Logo"
+                        className="w-auto h-24"
+                    />
                 </div>
             </div>
-            <div class="mt-[58px] mb-7 h-px bg-white/30"></div>
+            <div class="mt-[32px] mb-7 h-px bg-neutral-300"></div>
             <ul className="mb-auto pt-1">
                 <a href="">
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span class="font-bold text-[#0065FF]">
-                                <svg
-                                    stroke="currentColor"
-                                    fill="currentColor"
-                                    stroke-width="0"
-                                    viewBox="0 0 24 24"
-                                    class="h-6 w-6"
-                                    height="1em"
-                                    width="1em"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
-                                </svg>{" "}
+                            <span className="font-bold text-[#0065FF]">
+                                <IoHome fontSize={20} />
                             </span>
-                            <p class="leading-1 flex ms-4 font-semibold text-[#1b254b]">Main Dashboard</p>
+                            <p className="leading-1 flex ms-4 font-medium text-sm text-[#1b254b]">Main Dashboard</p>
                         </li>
-                        <div class="absolute top-px h-9 w-1 rounded-lg bg-[#0065FF] end-0"></div>
+                        <div className="absolute top-px h-6 w-1 rounded-lg bg-[#0065FF] end-0"></div>
                     </div>
                 </a>
+
+                <a href="">
+                    <div className="relative mb-3 flex hover:cursor-pointer">
+                        <li className="my-[3px] flex cursor-pointer items-center px-8">
+                            <span className="font-bold text-gray-700">
+                                <FaFileSignature fontSize={20} />
+                            </span>
+                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Employee Management</p>
+                        </li>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div className="relative mb-3 flex hover:cursor-pointer">
+                        <li className="my-[3px] flex cursor-pointer items-center px-8">
+                            <span className="font-bold text-gray-700">
+                                <IoCalendar fontSize={20} />
+                            </span>
+                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Attendance Tracker</p>
+                        </li>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div className="relative mb-3 flex hover:cursor-pointer">
+                        <li className="my-[3px] flex cursor-pointer items-center px-8">
+                            <span className="font-bold text-gray-700">
+                                <HiClipboardDocument fontSize={20} />
+                            </span>
+                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Leave Request</p>
+                        </li>
+                    </div>
+                </a>
+
+                <a href="">
+                    <div className="relative mb-3 flex hover:cursor-pointer">
+                        <li className="my-[3px] flex cursor-pointer items-center px-8">
+                            <span className="font-bold text-gray-700">
+                                <IoMdAnalytics fontSize={20} />
+                            </span>
+                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Performance Reports</p>
+                        </li>
+                    </div>
+                </a>
+
+                <div className="mt-12">
+                    <a href="">
+                        <div className="relative mb-3 flex hover:cursor-pointer">
+                            <li className="my-[3px] flex cursor-pointer items-center px-8">
+                                <span className="font-bold text-gray-700">
+                                    <BsPersonCircle fontSize={20} />
+                                </span>
+                                <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Profile</p>
+                            </li>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div className="relative mb-3 flex hover:cursor-pointer">
+                            <li className="my-[3px] flex cursor-pointer items-center px-8">
+                                <span className="font-bold text-gray-700">
+                                    <TbLogout2 fontSize={20} />
+                                </span>
+                                <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Log Out</p>
+                            </li>
+                        </div>
+                    </a>
+                </div>
             </ul>
+
         </div>
     );
 }
