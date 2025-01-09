@@ -1,8 +1,7 @@
 import React from "react";
 
 // import from nextui
-import { Badge } from "@nextui-org/react";
-import { Avatar } from "@nextui-org/react";
+import { Badge, Avatar, Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
 
 // import icon from react-icons
 import { IoMdNotificationsOutline } from "react-icons/io";
@@ -66,18 +65,76 @@ export default function Header() {
                     />
                 </div>
                 <div className="relative flex mt-2">
-                    <div className="flex">
-                        <p className="cursor-pointer">
-                            <Badge className="h-3 w-3" color="danger" content="1">
-                                <IoMdNotificationsOutline fontSize={25} />
-                            </Badge>
-                        </p>
-                    </div>
+                    <Popover showArrow offset={20} placement="bottom-end">
+                        <PopoverTrigger>
+                            <div className="flex">
+                                <div className="cursor-pointer">
+                                    <Badge className="h-3 w-3" color="danger" content="3">
+                                        <IoMdNotificationsOutline fontSize={25} />
+                                    </Badge>
+                                </div>
+                            </div>
+                        </PopoverTrigger>
+                        <PopoverContent>
+                            <div className="px-4 py-3">
+                                <div className="text-sm font-bold mb-2">Notifications</div>
+                                <div className="flex flex-col gap-3 text-sm">
+                                    <div className="flex items-start gap-2">
+                                        <div className="h-2 w-2 rounded-full bg-red-500 mt-1.5"></div>
+                                        <div>
+                                            <p className="font-medium text-gray-800">New Message</p>
+                                            <p className="text-gray-600 text-xs">You have a new message from John Doe</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <div className="h-2 w-2 rounded-full bg-yellow-500 mt-1.5"></div>
+                                        <div>
+                                            <p className="font-medium text-gray-800">Upcoming Meeting</p>
+                                            <p className="text-gray-600 text-xs">Meeting scheduled for 3:00 PM today</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-2">
+                                        <div className="h-2 w-2 rounded-full bg-blue-500 mt-1.5"></div>
+                                        <div>
+                                            <p className="font-medium text-gray-800">System Update</p>
+                                            <p className="text-gray-600 text-xs">A new system update is available</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr className="my-2" />
+                                <button className="w-full text-xs font-medium text-blue-600 hover:underline text-center">
+                                    View All Notifications
+                                </button>
+                            </div>
+                        </PopoverContent>
+                    </Popover>
                 </div>
+
                 <div className="relative flex">
-                    <div className="flex">
-                        <Avatar src="https://i.pinimg.com/736x/a4/8f/7b/a48f7b8c75dcf005195f078491eb5045.jpg" />
-                    </div>
+                    <Popover showArrow offset={20} placement="bottom-end">
+                        <PopoverTrigger>
+                            <div className="flex">
+                                <Avatar src="https://i.pinimg.com/736x/a4/8f/7b/a48f7b8c75dcf005195f078491eb5045.jpg" />
+                            </div>
+                        </PopoverTrigger>
+                        <PopoverContent>
+                            <div className="px-1 py-2">
+                                <div className="text-small font-bold">👋 Hey, Admin Manager</div>
+                                <div className="text-tiny">
+                                    <hr className="mt-2 mb-2" />
+                                    <div className="flex flex-col gap-2">
+                                        <a href="/">
+                                            Profile Settings
+                                        </a>
+                                        <a href="/" className="text-red-600">
+                                            Log Out
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </PopoverContent>
+                    </Popover>
+
                 </div>
             </div>
         </nav>
