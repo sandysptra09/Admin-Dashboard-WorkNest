@@ -42,7 +42,7 @@ export default function Sidebar() {
                     />
                 </div>
             </div>
-            <div class="mt-[32px] mb-7 h-px bg-neutral-300"></div>
+            <div className="mt-[32px] mb-7 h-px bg-neutral-300"></div>
             <ul className="mb-auto pt-1">
                 <a href="">
                     <div className="relative mb-3 flex hover:cursor-pointer">
