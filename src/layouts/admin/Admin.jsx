@@ -11,7 +11,7 @@ export default function Admin() {
                 <div className="sticky top-0 z-10 mb-4">
                     <Header />
                 </div>
-                <div className="overflow-y-auto flex-1 p-4">
+                <div className="overflow-y-auto flex-1 p-6">
                     <Outlet />
                 </div>
             </div>

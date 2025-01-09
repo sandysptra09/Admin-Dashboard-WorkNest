@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
+
 // import icons from react-icons
 import { IoHome } from "react-icons/io5";
 import { FaFileSignature } from "react-icons/fa6";
@@ -44,7 +46,7 @@ export default function Sidebar() {
             </div>
             <div className="mt-[32px] mb-7 h-px bg-neutral-300"></div>
             <ul className="mb-auto pt-1">
-                <a href="">
+                <Link to='/'>
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
                             <span className="font-bold text-[#0065FF]">
@@ -54,9 +56,9 @@ export default function Sidebar() {
                         </li>
                         <div className="absolute top-px h-6 w-1 rounded-lg bg-[#0065FF] end-0"></div>
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to='/employee-management'>
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
                             <span className="font-bold text-gray-700">
@@ -65,9 +67,9 @@ export default function Sidebar() {
                             <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Employee Management</p>
                         </li>
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to='/attendance-tracker'>
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
                             <span className="font-bold text-gray-700">
@@ -76,9 +78,9 @@ export default function Sidebar() {
                             <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Attendance Tracker</p>
                         </li>
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to='/leave-request'>
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
                             <span className="font-bold text-gray-700">
@@ -87,9 +89,9 @@ export default function Sidebar() {
                             <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Leave Request</p>
                         </li>
                     </div>
-                </a>
+                </Link>
 
-                <a href="">
+                <Link to='/performance-reports'>
                     <div className="relative mb-3 flex hover:cursor-pointer">
                         <li className="my-[3px] flex cursor-pointer items-center px-8">
                             <span className="font-bold text-gray-700">
@@ -98,10 +100,10 @@ export default function Sidebar() {
                             <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Performance Reports</p>
                         </li>
                     </div>
-                </a>
+                </Link>
 
                 <div className="mt-12">
-                    <a href="">
+                    <Link to='/profile'>
                         <div className="relative mb-3 flex hover:cursor-pointer">
                             <li className="my-[3px] flex cursor-pointer items-center px-8">
                                 <span className="font-bold text-gray-700">
@@ -110,7 +112,7 @@ export default function Sidebar() {
                                 <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Profile</p>
                             </li>
                         </div>
-                    </a>
+                    </Link>
 
                     <a href="">
                         <div className="relative mb-3 flex hover:cursor-pointer">
