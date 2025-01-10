@@ -7,7 +7,11 @@ import { MdOutlinePayments } from "react-icons/md";
 import { BiTask } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { HiClipboardDocument } from "react-icons/hi2";
-import ChartAnalytics from "../../components/Chart/Chart";
+import { FaChartPie } from "react-icons/fa6";
+
+// import components
+import AnalyticsChart from "../../components/Chart/AnalyticsChart";
+import AttendanceOverviewChart from "../../components/Chart/AttendanceOverviewChart";
 
 export default function AnalyticsDashboard() {
     return (
@@ -114,11 +118,14 @@ export default function AnalyticsDashboard() {
 
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
                 <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
-                    <div className="flex items-center justify-between px-6">
-                        <h2 className="text-lg font-bold text-[#1b254b]">Weekly Revenue</h2>
-                        <button className="linear flex items-center justify-center rounded-lg bg-lightPrimary p-2 text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-navy-700 dark:text-white dark:hover:bg-white/20 dark:active:bg-white/10">
-
+                    <div className="mb-2 flex items-center justify-between px-6">
+                        <h2 className="text-lg font-bold text-[#1b254b]">Attendance Overview</h2>
+                        <button className="linear flex items-center justify-center rounded-lg bg-sky-100 p-2 text-[#0065FF] transition duration-200 hover:bg-gray-100">
+                            <FaChartPie fontSize={20} />
                         </button>
+                    </div>
+                    <div className="">
+                        <AttendanceOverviewChart />
                     </div>
                 </div>
 
@@ -126,9 +133,20 @@ export default function AnalyticsDashboard() {
             </div>
 
 
-            <div className="mx-auto mt-8 ">
-                <ChartAnalytics />
+            <div className="mx-auto mt-6 ">
+                <AnalyticsChart />
             </div>
+
+            <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
+
+                </div>
+
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
+
+                </div>
+            </div>
+
         </div>
     );
 }

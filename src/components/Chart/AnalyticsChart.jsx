@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Chart } from 'primereact/chart'
 
-export default function ChartAnalytics() {
+export default function AnalyticsChart() {
 
     // initial state
     const [chartData, setChartData] = useState({});
@@ -23,8 +23,8 @@ export default function ChartAnalytics() {
                 },
                 {
                     label: 'My Second dataset',
-                    backgroundColor: '#FFC542',
-                    borderColor: '#FFC542',
+                    backgroundColor: '#E7CA29',
+                    borderColor: '#E7CA29',
                     data: [28, 48, 40, 19, 86, 27, 90]
                 }
             ]
