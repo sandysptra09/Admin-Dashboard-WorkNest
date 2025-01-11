@@ -8,7 +8,7 @@ export default function RequestOverviewChart() {
     useEffect(() => {
         const pastelColors = [
             '#0065FF',
-            '#E7CA29    ',
+            '#E7CA29 ',
             '#EC221F',
             '#2FD686',
         ];

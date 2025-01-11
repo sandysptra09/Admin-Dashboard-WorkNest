@@ -8,12 +8,14 @@ import { BiTask } from "react-icons/bi";
 import { IoTime } from "react-icons/io5";
 import { HiClipboardDocument } from "react-icons/hi2";
 import { FaChartPie } from "react-icons/fa6";
+import { FaChartLine } from "react-icons/fa6";
 
 // import components
 import AnalyticsChart from "../../components/Chart/AnalyticsChart";
 import AttendanceOverviewChart from "../../components/Chart/AttendanceOverviewChart";
 import CalendarOverview from "../../components/Calendar/CalendarOverview";
 import RequestOverviewChart from "../../components/Chart/RequestOverviewChart";
+import AttendanceDetailChart from "../../components/Chart/AttendanceDetailChart";
 
 export default function AnalyticsDashboard() {
     return (
@@ -119,7 +121,7 @@ export default function AnalyticsDashboard() {
             </div>
 
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-[20px] text-center">
                     <div className="mb-2 flex items-center justify-between px-6">
                         <h2 className="text-lg font-bold text-[#1b254b]">Attendance Overview</h2>
                         <button className="linear flex items-center justify-center rounded-lg bg-sky-100 p-2 text-[#0065FF] transition duration-200 hover:bg-gray-100">
@@ -131,7 +133,17 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center"></div>
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-[20px] text-center">
+                    <div className="mb-2 flex items-center justify-between px-6">
+                        <h2 className="text-lg font-bold text-[#1b254b]">Attendance Detail</h2>
+                        <button className="linear flex items-center justify-center rounded-lg bg-sky-100 p-2 text-[#0065FF] transition duration-200 hover:bg-gray-100">
+                            <FaChartLine fontSize={20} />
+                        </button>
+                    </div>
+                    <div className="">
+                        <AttendanceDetailChart />
+                    </div>
+                </div>
             </div>
 
 
