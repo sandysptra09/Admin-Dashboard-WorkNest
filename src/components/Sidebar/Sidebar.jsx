@@ -1,6 +1,5 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 // import icons from react-icons
 import { IoHome } from "react-icons/io5";
@@ -12,29 +11,20 @@ import { BsPersonCircle } from "react-icons/bs";
 import { TbLogout2 } from "react-icons/tb";
 
 export default function Sidebar() {
+
+    // initialize the location
+    const location = useLocation();
+    const menuItems = [
+        { path: "/", icon: <IoHome fontSize={20} />, label: "Main Dashboard" },
+        { path: "/employee-management", icon: <FaFileSignature fontSize={20} />, label: "Employee Management" },
+        { path: "/attendance-tracker", icon: <IoCalendar fontSize={20} />, label: "Attendance Tracker" },
+        { path: "/leave-request", icon: <HiClipboardDocument fontSize={20} />, label: "Leave Request" },
+        { path: "/performance-reports", icon: <IoMdAnalytics fontSize={20} />, label: "Performance Reports" },
+        { path: "/profile", icon: <BsPersonCircle fontSize={20} />, label: "Profile" },
+    ];
+
     return (
-        <div className="flex min-h-full flex-col bg-white pb-10 shadow-2xl shadow-white/5 transition-all dark:!bg-navy-800 dark:text-white md:!z-50 lg:!z-50 xl:!z-0 translate-x-0">
-            <span
-                className="absolute top-4 right-4 block cursor-pointer xl:hidden"
-                aria-label="Close Sidebar"
-            >
-                <svg
-                    stroke="currentColor"
-                    fill="currentColor"
-                    strokeWidth="0"
-                    viewBox="0 0 20 20"
-                    aria-hidden="true"
-                    height="1em"
-                    width="1em"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        fillRule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clipRule="evenodd"
-                    ></path>
-                </svg>
-            </span>
+        <div className="flex min-h-full flex-col bg-white pb-10 shadow-2xl shadow-white/5 transition-all dark:!bg-navy-800 dark:text-white">
             <div className="mx-[56px] mt-[32px] flex items-center">
                 <div className="mt-1 ml-2 flex justify-center items-center">
                     <img
@@ -45,88 +35,39 @@ export default function Sidebar() {
                 </div>
             </div>
             <div className="mt-[32px] mb-7 h-px bg-neutral-300"></div>
-            <ul className="mb-auto pt-1">
-                <Link to='/'>
-                    <div className="relative mb-3 flex hover:cursor-pointer">
-                        <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span className="font-bold text-[#0065FF]">
-                                <IoHome fontSize={20} />
-                            </span>
-                            <p className="leading-1 flex ms-4 font-medium text-sm text-[#1b254b]">Main Dashboard</p>
-                        </li>
-                        <div className="absolute top-px h-6 w-1 rounded-lg bg-[#0065FF] end-0"></div>
-                    </div>
-                </Link>
-
-                <Link to='/employee-management'>
-                    <div className="relative mb-3 flex hover:cursor-pointer">
-                        <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span className="font-bold text-gray-700">
-                                <FaFileSignature fontSize={20} />
-                            </span>
-                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Employee Management</p>
-                        </li>
-                    </div>
-                </Link>
-
-                <Link to='/attendance-tracker'>
-                    <div className="relative mb-3 flex hover:cursor-pointer">
-                        <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span className="font-bold text-gray-700">
-                                <IoCalendar fontSize={20} />
-                            </span>
-                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Attendance Tracker</p>
-                        </li>
-                    </div>
-                </Link>
-
-                <Link to='/leave-request'>
-                    <div className="relative mb-3 flex hover:cursor-pointer">
-                        <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span className="font-bold text-gray-700">
-                                <HiClipboardDocument fontSize={20} />
-                            </span>
-                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Leave Request</p>
-                        </li>
-                    </div>
-                </Link>
-
-                <Link to='/performance-reports'>
-                    <div className="relative mb-3 flex hover:cursor-pointer">
-                        <li className="my-[3px] flex cursor-pointer items-center px-8">
-                            <span className="font-bold text-gray-700">
-                                <IoMdAnalytics fontSize={20} />
-                            </span>
-                            <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Performance Reports</p>
-                        </li>
-                    </div>
-                </Link>
-
-                <div className="mt-12">
-                    <Link to='/profile'>
-                        <div className="relative mb-3 flex hover:cursor-pointer">
-                            <li className="my-[3px] flex cursor-pointer items-center px-8">
-                                <span className="font-bold text-gray-700">
-                                    <BsPersonCircle fontSize={20} />
-                                </span>
-                                <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Profile</p>
-                            </li>
+            <ul className="mb-auto pt-1 p-2">
+                {menuItems.map((item, index) => (
+                    <Link to={item.path} key={index}>
+                        <div
+                            className={`w-[280px] relative mb-3 flex items-center hover:cursor-pointer px-8 py-2 transition-all duration-200 rounded-lg 
+                                ${location.pathname === item.path
+                                    ? "bg-[#0065FF] text-white shadow-lg"
+                                    : "text-gray-700 hover:bg-sky-100"
+                                }`}
+                        >
+                            <span className="font-bold">{item.icon}</span>
+                            <p className="leading-1 ms-4 font-medium text-sm">
+                                {item.label}
+                            </p>
+                            {location.pathname === item.path && (
+                                <div className="absolute top-1/2 transform -translate-y-1/2 end-0 h-6 w-1 bg-[#0065FF] rounded-lg"></div>
+                            )}
                         </div>
                     </Link>
-
+                ))}
+                <div className="mt-12">
                     <a href="">
-                        <div className="relative mb-3 flex hover:cursor-pointer">
-                            <li className="my-[3px] flex cursor-pointer items-center px-8">
-                                <span className="font-bold text-gray-700">
-                                    <TbLogout2 fontSize={20} />
-                                </span>
-                                <p className="leading-1 flex ms-4 font-medium text-sm text-gray-700">Log Out</p>
-                            </li>
+                        <div className="relative mb-3 flex items-center px-8 py-2 transition-all duration-200 rounded-lg text-gray-700 hover:bg-gray-100 dark:hover:bg-navy-700 hover:cursor-pointer">
+                            <span className="font-bold">
+                                <TbLogout2 fontSize={20} />
+                            </span>
+                            <p className="leading-1 ms-4 font-medium text-sm">
+                                Log Out
+                            </p>
                         </div>
                     </a>
                 </div>
             </ul>
-
         </div>
     );
 }
