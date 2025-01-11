@@ -69,7 +69,7 @@ export default function AnalyticsChart() {
     }, []);
 
     return (
-        <div className='px-4 py-4 mb-auto bg-white shadow-3xl rounded-[20px] items-center'>
+        <div className='card'>
             <Chart type="bar" data={chartData} options={chartOptions} />
         </div>
     )

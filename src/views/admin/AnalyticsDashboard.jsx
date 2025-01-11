@@ -148,7 +148,16 @@ export default function AnalyticsDashboard() {
 
 
             <div className="mx-auto mt-6 ">
-                <AnalyticsChart />
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-6 text-center">
+                    <div className="mb-4 flex items-center justify-between">
+                        <h2 className="text-lg font-bold text-[#1b254b]">
+                            Income Statistics
+                        </h2>
+                    </div>
+                    <div className="">
+                        <AnalyticsChart />
+                    </div>
+                </div>
             </div>
 
             <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
@@ -169,8 +178,15 @@ export default function AnalyticsDashboard() {
 
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center p-5">
-                    <CalendarOverview />
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3x text-center p-5">
+                    <div className="mb-4 flex items-center justify-between">
+                        <h2 className="text-lg font-bold text-[#1b254b]">
+                            Overview by Date
+                        </h2>
+                    </div>
+                    <div className="">
+                        <CalendarOverview />
+                    </div>
                 </div>
             </div>
 

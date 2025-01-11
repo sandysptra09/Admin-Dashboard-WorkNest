@@ -14,15 +14,15 @@ export default function RequestOverviewChart() {
         ];
 
         const documentStyle = getComputedStyle(document.documentElement);
-        const textColor = documentStyle.getPropertyValue('--text-color') || '#495057';
-        const gridColor = documentStyle.getPropertyValue('--surface-border') || '#e9ecef';
+        const textColor = '#495057';
+        const gridColor = '#e9ecef';
 
         const data = {
             datasets: [
                 {
                     data: [14, 16, 7, 3],
                     backgroundColor: pastelColors,
-                    hoverBackgroundColor: pastelColors.map(color => `${color}AA`), // Tambahkan transparansi pada hover
+                    hoverBackgroundColor: pastelColors.map(color => `${color}AA`),
                     label: 'Request Overview Dataset'
                 }
             ],
