@@ -14,14 +14,14 @@ export default function AttendanceOverviewChart() {
                 {
                     data: [540, 325, 702],
                     backgroundColor: [
-                        '#2FD686',
-                        '#E7CA29',
-                        '#EC221F'
+                        '#0065FF',
+                        '#6ad2ff',
+                        '#E7CA29'
                     ],
                     hoverBackgroundColor: [
-                        '#2FD686',
-                        '#E7CA29',
-                        '#EC221F'
+                        '#0065FF',
+                        '#6ad2ff',
+                        '#E7CA29'
                     ]
                 }
             ]

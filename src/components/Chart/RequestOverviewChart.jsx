@@ -8,9 +8,9 @@ export default function RequestOverviewChart() {
     useEffect(() => {
         const pastelColors = [
             '#0065FF',
-            '#E7CA29 ',
-            '#EC221F',
-            '#2FD686',
+            '#6ad2ff ',
+            '#E7CA29',
+            '#bdc3e1',
         ];
 
         const documentStyle = getComputedStyle(document.documentElement);
