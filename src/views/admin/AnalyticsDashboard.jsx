@@ -12,6 +12,8 @@ import { FaChartPie } from "react-icons/fa6";
 // import components
 import AnalyticsChart from "../../components/Chart/AnalyticsChart";
 import AttendanceOverviewChart from "../../components/Chart/AttendanceOverviewChart";
+import CalendarOverview from "../../components/Calendar/CalendarOverview";
+import RequestOverviewChart from "../../components/Chart/RequestOverviewChart";
 
 export default function AnalyticsDashboard() {
     return (
@@ -137,13 +139,26 @@ export default function AnalyticsDashboard() {
                 <AnalyticsChart />
             </div>
 
-            <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
+            <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-6 text-center">
+                    <div className="mb-4 flex items-center justify-between">
+                        <h2 className="text-lg font-bold text-[#1b254b]">
+                            Request Overview
+                        </h2>
+                    </div>
+
+                    <div className="flex justify-center">
+                        <RequestOverviewChart />
+                    </div>
+                </div>
+
+
+                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
 
                 </div>
 
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl dark:text-white dark:shadow-none p-[20px] text-center">
-
+                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center p-5">
+                    <CalendarOverview />
                 </div>
             </div>
 
