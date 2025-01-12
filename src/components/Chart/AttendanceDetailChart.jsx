@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
 
 export default function AttendanceDetailChart() {
-    // Initialize state
+    // initialize state
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
 

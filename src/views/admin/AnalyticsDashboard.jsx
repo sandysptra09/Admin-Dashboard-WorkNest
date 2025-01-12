@@ -178,7 +178,7 @@ export default function AnalyticsDashboard() {
                     {/* disini */}
                 </div>
 
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3x text-center p-5">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3x text-center p-4">
                     <div className="mb-4 flex items-center justify-between">
                         <h2 className="text-lg font-bold text-[#1b254b]">
                             Overview by Date

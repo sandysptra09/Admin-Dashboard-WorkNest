@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 
 // import from nextui
 import { Badge, Avatar, Popover, PopoverTrigger, PopoverContent } from "@nextui-org/react";
@@ -7,10 +8,33 @@ import { Badge, Avatar, Popover, PopoverTrigger, PopoverContent } from "@nextui-
 import { IoMdNotificationsOutline } from "react-icons/io";
 
 export default function Header() {
+    // initialize location path
+    const location = useLocation();
+
+    const getTitle = () => {
+        switch (location.pathname) {
+            case "/":
+                return "Main Dashboard";
+            case "/employee-management":
+                return "Employee Management";
+            case "/attendance-tracker":
+                return "Attendance Tracker";
+            case "/leave-request":
+                return "Leave Request";
+            case "/performance-reports":
+                return "Performance Reports";
+            case "/profile":
+                return "Profile";
+            default:
+                return "Page Not Found";
+        }
+    };
+
+
     return (
         <nav className="sticky top-4 z-40 flex flex-row flex-wrap items-center justify-between rounded-xl bg-white/10 p-4 backdrop-blur-xl">
             <div className="ml-4">
-                <div className="h-6 w-[224px] pt-1">
+                <div className="h-6 w-auto pt-1">
                     <a
                         className="text-sm font-normal text-[#1b254b] hover:underline"
                         href=" "
@@ -27,7 +51,7 @@ export default function Header() {
                         className="text-sm font-normal capitalize text-[#1b254b] hover:underline"
                         href=""
                     >
-                        Main Dashboard
+                        {getTitle()}
                     </a>
                 </div>
                 <p className="shrink text-[30px] capitalize text-[#1b254b] mt-2">
@@ -35,7 +59,7 @@ export default function Header() {
                         className="font-bold capitalize hover:text-navy-700"
                         href="/horizon-tailwind-react/admin/default"
                     >
-                        Main Dashboard
+                        {getTitle()}
                     </a>
                 </p>
             </div>
