@@ -21,7 +21,7 @@ export default function AnalyticsDashboard() {
     return (
         <div className="pt-2 mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2">
             <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -37,7 +37,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -53,7 +53,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -71,7 +71,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -87,7 +87,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -103,7 +103,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     <div className="ml-[18px] flex h-[90px] items-center">
                         <div className="rounded-full bg-sky-100 p-3">
                             <span className="flex items-center text-[#0065FF]">
@@ -121,7 +121,7 @@ export default function AnalyticsDashboard() {
             </div>
 
             <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2">
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-[20px] text-center">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-lg p-[20px] text-center">
                     <div className="mb-2 flex items-center justify-between px-6">
                         <h2 className="text-lg font-bold text-[#1b254b]">Attendance Overview</h2>
                         <button className="linear flex items-center justify-center rounded-lg bg-sky-100 p-2 text-[#0065FF] transition duration-200 hover:bg-gray-100">
@@ -133,7 +133,7 @@ export default function AnalyticsDashboard() {
                     </div>
                 </div>
 
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-[20px] text-center">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-lg p-[20px] text-center">
                     <div className="mb-2 flex items-center justify-between px-6">
                         <h2 className="text-lg font-bold text-[#1b254b]">Attendance Detail</h2>
                         <button className="linear flex items-center justify-center rounded-lg bg-sky-100 p-2 text-[#0065FF] transition duration-200 hover:bg-gray-100">
@@ -148,7 +148,7 @@ export default function AnalyticsDashboard() {
 
 
             <div className="mx-auto mt-6 ">
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-6 text-center">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-lg p-6 text-center">
                     <div className="mb-4 flex items-center justify-between">
                         <h2 className="text-lg font-bold text-[#1b254b]">
                             Income Statistics
@@ -160,8 +160,8 @@ export default function AnalyticsDashboard() {
                 </div>
             </div>
 
-            <div className="mt-3 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
-                <div className="relative flex flex-col rounded-[20px] bg-white shadow-3xl p-6 text-center">
+            <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 3xl:grid-cols-6">
+                <div className="relative flex flex-col rounded-[20px] bg-white shadow-lg p-6 text-center">
                     <div className="mb-4 flex items-center justify-between">
                         <h2 className="text-lg font-bold text-[#1b254b]">
                             Request Overview
@@ -174,7 +174,7 @@ export default function AnalyticsDashboard() {
                 </div>
 
 
-                <div className="relative flex bg-white shadow-3xl rounded-[20px] items-center">
+                <div className="relative flex bg-white shadow-lg rounded-[20px] items-center">
                     {/* disini */}
                 </div>
 
