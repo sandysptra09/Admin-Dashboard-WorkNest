@@ -16,7 +16,7 @@ import { SearchBy, DropDownByRole, DropDownByDepartmen, DropDownByStatus } from 
 
 export default function SearchFilter() {
     return (
-        <div className='mt-4 flex justify-start gap-3'>
+        <div className='mt-2 flex justify-start gap-3'>
             <Input
                 size='sm'
                 isClearable

@@ -3,6 +3,7 @@ import React from 'react'
 // import components
 import DataActionButton from '../../components/Button/DataActionButton'
 import SearchFilter from '../../components/SearchFilter/SearchFilter'
+import EmployeeData from '../../components/Table/EmployeeData'
 
 export default function EmployeeManagement() {
     return (
@@ -12,6 +13,8 @@ export default function EmployeeManagement() {
                     <DataActionButton />
 
                     <SearchFilter />
+
+                    <EmployeeData />
                 </div>
             </div>
         </div>
