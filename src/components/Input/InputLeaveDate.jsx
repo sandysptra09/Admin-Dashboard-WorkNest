@@ -8,8 +8,7 @@ const DatePicker = forwardRef((props, ref) => {
     return <OriginalDatePicker {...props} ref={ref} />;
 });
 
-export default function InputTrackerDate() {
-
+export default function InputLeaveDate() {
     // initialze date and state
     const { locale } = useLocale();
     const [currentDate, setCurrentDate] = useState(today(getLocalTimeZone()));

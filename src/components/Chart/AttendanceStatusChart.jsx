@@ -9,7 +9,7 @@ export default function AttendanceStatusChart() {
 
     useEffect(() => {
         const data = {
-            llabels: ['Attend', 'Absent', 'Late'],
+            labels: ['Attend', 'Absent', 'Late'],
             datasets: [
                 {
                     data: [300, 50, 100],
