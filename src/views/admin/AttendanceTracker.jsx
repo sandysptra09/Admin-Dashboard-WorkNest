@@ -91,6 +91,10 @@ export default function AttendanceTracker() {
                 </div>
             </div>
 
+            <div className="mb-12">
+                <br />
+            </div>
+
         </div>
     )
 }

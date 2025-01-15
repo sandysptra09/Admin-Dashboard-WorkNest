@@ -17,6 +17,10 @@ export default function EmployeeManagement() {
                     <EmployeeData />
                 </div>
             </div>
+
+            <div className="mb-12">
+                <br />
+            </div>
         </div>
     )
 }

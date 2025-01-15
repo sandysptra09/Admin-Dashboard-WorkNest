@@ -190,6 +190,10 @@ export default function AnalyticsDashboard() {
                 </div>
             </div>
 
+            <div className="mb-12">
+                <br />
+            </div>
+
         </div>
     );
 }
