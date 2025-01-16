@@ -1,5 +1,9 @@
 import React from 'react'
 
+// import componnets
+import ProfileTabs from '../../components/Tabs/ProfileTabs';
+import SettingsTabs from '../../components/Tabs/SettingsTabs';
+
 // import react-icons
 import { BsPersonCircle } from "react-icons/bs";
 import { IoMdSettings } from "react-icons/io";
@@ -9,7 +13,7 @@ import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
 
 export default function Profile() {
     return (
-        <div className='pt-2 mx-auto mb-auto h-full min-h-[84vh] p-2 md:pr-2'>
+        <div className='pt-2 mx-auto mb-auto h-full p-2 md:pr-2'>
             <div className="flex w-full flex-col ">
                 <Tabs aria-label="Options" className='' color='primary'>
                     <Tab key="profile" title={
@@ -20,7 +24,7 @@ export default function Profile() {
                     }>
                         <Card className='shadow-lg rounded-[20px] text-sm p-4'>
                             <CardBody >
-                                Profile tabs
+                                <ProfileTabs />
                             </CardBody>
                         </Card>
                     </Tab>
@@ -32,7 +36,7 @@ export default function Profile() {
                     }>
                         <Card className='shadow-lg rounded-[20px] text-sm p-4'>
                             <CardBody>
-                                Settings tabs
+                                <SettingsTabs />
                             </CardBody>
                         </Card>
                     </Tab>
