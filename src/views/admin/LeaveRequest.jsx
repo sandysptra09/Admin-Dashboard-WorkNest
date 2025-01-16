@@ -3,6 +3,7 @@ import React from 'react'
 // import components
 import DataActionButtonLeave from '../../components/Button/DataActionButtonLeave'
 import SearchFilterLeave from '../../components/SearchFilter/SearchFilterLeave'
+import LeaveRequestData from '../../components/Table/LeaveRequestData'
 
 export default function LeaveRequest() {
     return (
@@ -12,6 +13,8 @@ export default function LeaveRequest() {
                     <DataActionButtonLeave />
 
                     <SearchFilterLeave />
+
+                    <LeaveRequestData />
                 </div>
             </div>
 

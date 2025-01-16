@@ -4,18 +4,21 @@ import scrollbar_custom from '../../module/gblobal.module.scss'
 // import from nextui
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Tooltip, Chip, Avatar, Pagination } from '@nextui-org/react'
 
+// import react-icons
+import { GoInfo } from "react-icons/go";
+
 export default function LeaveRequestData() {
     return (
-        <div className=''>
+        <div className='mt-3'>
             <div className={`w-[860px] overflow-x-scroll ${scrollbar_custom.customscrollbar}`}>
                 <Table fullWidth removeWrapper aria-label="Example static collection table" className=''>
                     <TableHeader className='w-full'>
                         <TableColumn>ID</TableColumn>
                         <TableColumn>NAME</TableColumn>
-                        <TableColumn>DATE</TableColumn>
-                        <TableColumn>STATUS</TableColumn>
-                        <TableColumn>CHECK-IN</TableColumn>
-                        <TableColumn>CHECK-OUT</TableColumn>
+                        <TableColumn>TYPE</TableColumn>
+                        <TableColumn>START DATE</TableColumn>
+                        <TableColumn>END DATE</TableColumn>
+                        <TableColumn>MANAGE</TableColumn>
                     </TableHeader>
                     <TableBody>
                         <TableRow key="1">
@@ -26,14 +29,20 @@ export default function LeaveRequestData() {
                                     <span>John Doe</span>
                                 </div>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
                             <TableCell className='whitespace-nowrap'>
                                 <Chip size='sm' color="primary" variant="flat">
-                                    Attend
+                                    Annual
                                 </Chip>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>07:00 AM</TableCell>
-                            <TableCell className='whitespace-nowrap'>18:30 PM</TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                04/04/2024
+                            </TableCell>
+                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
+                            <TableCell className='whitespace-nowrap'><Tooltip content="Manage">
+                                <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                                    <GoInfo />
+                                </span>
+                            </Tooltip></TableCell>
 
                         </TableRow>
                         <TableRow key="2">
@@ -44,14 +53,20 @@ export default function LeaveRequestData() {
                                     <span>John Doe</span>
                                 </div>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
                             <TableCell className='whitespace-nowrap'>
                                 <Chip size='sm' className='text-[#6ad2ff] bg-[#6ad2ff]/20' variant="flat">
-                                    Absent
+                                    Vacation
                                 </Chip>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>--:--</TableCell>
-                            <TableCell className='whitespace-nowrap'>--:--</TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                04/04/2024
+                            </TableCell>
+                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
+                            <TableCell className='whitespace-nowrap'><Tooltip content="Manage">
+                                <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                                    <GoInfo />
+                                </span>
+                            </Tooltip></TableCell>
                         </TableRow>
 
                         <TableRow key="3">
@@ -62,14 +77,22 @@ export default function LeaveRequestData() {
                                     <span>John Doe</span>
                                 </div>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
                             <TableCell className='whitespace-nowrap'>
                                 <Chip size='sm' color="warning" variant="flat">
-                                    Late
+                                    Sick
                                 </Chip>
                             </TableCell>
-                            <TableCell className='whitespace-nowrap'>08:30 AM</TableCell>
-                            <TableCell className='whitespace-nowrap'>15:45 PM</TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                04/04/2024
+                            </TableCell>
+                            <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                <Tooltip content="Manage">
+                                    <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
+                                        <GoInfo />
+                                    </span>
+                                </Tooltip>
+                            </TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
