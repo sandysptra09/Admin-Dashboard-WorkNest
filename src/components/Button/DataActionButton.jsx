@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@nextui-org/react';
 
 // Import icons
-import { ImportDataEmployee, ExportDataEmployee, AddEmployee } from './IconsButton';
+import { ImportDataEmployee, ExportDataEmployee } from './IconsButton';
+
+// Import modal components
+import AddEmployeeModal from '../Modal/AddEmployeeModal';
 
 export default function DataActionButton() {
     return (
@@ -17,9 +20,7 @@ export default function DataActionButton() {
                 <Button size='sm' startContent={<ExportDataEmployee />} className='bg-slate-100'>
                     Export
                 </Button>
-                <Button color="primary" size='sm' startContent={<AddEmployee />}>
-                    <Link to='/employee-management/add-employee'>Add Employee</Link>
-                </Button>
+                <AddEmployeeModal />
             </div>
         </div>
     );
