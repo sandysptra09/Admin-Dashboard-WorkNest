@@ -29,16 +29,14 @@ export default function AddEmployeeModal() {
                             <ModalHeader className="flex flex-col gap-1">Add New Employee</ModalHeader>
                             <ModalBody className='flex flex-col gap-1'>
                                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <Input size='sm' label="NIP" placeholder="Enter NIP" type="text" required />
-                                    <Input size='sm' label="NIK" placeholder="Enter NIK" type="number" required />
-                                    <Select size='sm' placeholder='Select Role' label="Role" required>
-                                        <Select size='sm' placeholder='Role'>
-                                            <SelectItem>Chief Executive Officer (CEO)</SelectItem>
-                                            <SelectItem>Product Manager</SelectItem>
-                                            <SelectItem>Software Engineer</SelectItem>
-                                        </Select>
+                                    <Input size='sm' label="NIP" placeholder="Enter NIP" type="text" isRequired />
+                                    <Input size='sm' label="NIK" placeholder="Enter NIK" type="number" isRequired />
+                                    <Select size='sm' placeholder='Role' label="Select Role" isRequired>
+                                        <SelectItem>Chief Executive Officer (CEO)</SelectItem>
+                                        <SelectItem>Product Manager</SelectItem>
+                                        <SelectItem>Software Engineer</SelectItem>
                                     </Select>
-                                    <Select size='sm' placeholder='Select Departmen' label="Departmen" required>
+                                    <Select size='sm' placeholder='Select Departmen' label="Departmen" isRequired>
                                         <SelectItem>Frontend Developer</SelectItem>
                                         <SelectItem>Backend Developer</SelectItem>
                                         <SelectItem>Fullstack Developer</SelectItem>
@@ -48,28 +46,29 @@ export default function AddEmployeeModal() {
                                         <SelectItem>Quality Assurance</SelectItem>
                                         <SelectItem>UX/UI Designer</SelectItem>
                                     </Select>
-                                    <Input size='sm' label="Name" placeholder="Enter Full Name" type="text" />
-                                    <Select size='sm' placeholder='Select Gender' label="Gender" required>
+                                    <Input size='sm' label="Name" placeholder="Enter Full Name" type="text" isRequired />
+                                    <Select size='sm' placeholder='Select Gender' label="Gender" isRequired>
                                         <SelectItem>Male</SelectItem>
                                         <SelectItem>Female</SelectItem>
                                     </Select>
-                                    <Input size='sm' label="Birth Place" placeholder="Enter Birth Place" type="text" required />
-                                    <DatePicker size='sm' className="w-full" label="Enter Birth date" />
-                                    <Input size='sm' label="Phone" placeholder="Enter Phone Number" type="number" required />
-                                    <Select size='sm' placeholder='Select Religion' label="Religion" required>
+                                    <Input size='sm' label="Birth Place" placeholder="Enter Birth Place" type="text" isRequired />
+                                    <DatePicker size='sm' className="w-full" label="Enter Birth date" isRequired />
+                                    <Input size='sm' label="Phone" placeholder="Enter Phone Number" type="number" isRequired />
+                                    <Select size='sm' placeholder='Select Religion' label="Religion" isRequired>
                                         <SelectItem>Islam</SelectItem>
                                         <SelectItem>Christian</SelectItem>
                                         <SelectItem>Catholic</SelectItem>
                                         <SelectItem>Hindu</SelectItem>
                                         <SelectItem>Buddhist</SelectItem>
                                     </Select>
-                                    <Select size='sm' placeholder='Select Marital Status' label="Marital Status" required>
+                                    <Select size='sm' placeholder='Select Marital Status' label="Marital Status" isRequired>
                                         <SelectItem>Single</SelectItem>
                                         <SelectItem>Married</SelectItem>
                                         <SelectItem>Divorced</SelectItem>
                                     </Select>
                                     <Input size='sm'
                                         className="w-full"
+                                        isRequired
                                         endContent={
                                             <button
                                                 aria-label="toggle password visibility"
@@ -89,7 +88,7 @@ export default function AddEmployeeModal() {
                                         type={isVisible ? "text" : "password"}
 
                                     />
-                                    <Textarea className="w-full" label="Address" placeholder="Enter Address" />
+                                    <Textarea className="w-full" label="Address" placeholder="Enter Address" isRequired />
 
                                 </form>
                             </ModalBody>
