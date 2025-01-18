@@ -24,7 +24,9 @@ export default function SearchFilter() {
 
             <div className='w-full flex gap-3'>
                 <Select size='sm' placeholder='Role'>
-                    <SelectItem>Employee</SelectItem>
+                    <SelectItem>Chief Executive Officer (CEO)</SelectItem>
+                    <SelectItem>Product Manager</SelectItem>
+                    <SelectItem>Software Engineer</SelectItem>
                 </Select>
 
                 <Select size='sm' placeholder='Departmen'>

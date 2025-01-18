@@ -32,7 +32,11 @@ export default function AddEmployeeModal() {
                                     <Input size='sm' label="NIP" placeholder="Enter NIP" type="text" required />
                                     <Input size='sm' label="NIK" placeholder="Enter NIK" type="number" required />
                                     <Select size='sm' placeholder='Select Role' label="Role" required>
-                                        <SelectItem>Employee</SelectItem>
+                                        <Select size='sm' placeholder='Role'>
+                                            <SelectItem>Chief Executive Officer (CEO)</SelectItem>
+                                            <SelectItem>Product Manager</SelectItem>
+                                            <SelectItem>Software Engineer</SelectItem>
+                                        </Select>
                                     </Select>
                                     <Select size='sm' placeholder='Select Departmen' label="Departmen" required>
                                         <SelectItem>Frontend Developer</SelectItem>
