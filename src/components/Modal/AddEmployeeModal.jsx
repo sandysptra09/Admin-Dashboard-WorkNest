@@ -81,7 +81,7 @@ export default function AddEmployeeModal() {
                                             </button>
                                         }
                                         label="Password"
-                                        placeholder="Enter your password"
+                                        placeholder="Enter password"
                                         type={isVisible ? "text" : "password"}
 
                                     />
