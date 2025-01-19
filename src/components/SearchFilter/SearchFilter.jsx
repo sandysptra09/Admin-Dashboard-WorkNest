@@ -23,13 +23,13 @@ export default function SearchFilter() {
             />
 
             <div className='w-full flex gap-3'>
-                <Select size='sm' placeholder='Role'>
+                <Select size='sm' placeholder='Role' aria-label="Filter by Role">
                     <SelectItem>Chief Executive Officer (CEO)</SelectItem>
                     <SelectItem>Product Manager</SelectItem>
                     <SelectItem>Software Engineer</SelectItem>
                 </Select>
 
-                <Select size='sm' placeholder='Departmen'>
+                <Select size='sm' placeholder='Departmen' aria-label="Filter by Departmen">
                     <SelectItem>Frontend Developer</SelectItem>
                     <SelectItem>Backend Developer</SelectItem>
                     <SelectItem>Fullstack Developer</SelectItem>
@@ -40,7 +40,7 @@ export default function SearchFilter() {
                     <SelectItem>UX/UI Designer</SelectItem>
                 </Select>
 
-                <Select size='sm' placeholder='Status'>
+                <Select size='sm' placeholder='Status' aria-label="Filter by Status">
                     <SelectItem>Active</SelectItem>
                     <SelectItem>Inactive</SelectItem>
                 </Select>

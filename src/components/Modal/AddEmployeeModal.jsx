@@ -31,7 +31,7 @@ export default function AddEmployeeModal() {
                                 <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <Input size='sm' label="NIP" placeholder="Enter NIP" type="text" isRequired />
                                     <Input size='sm' label="NIK" placeholder="Enter NIK" type="number" isRequired />
-                                    <Select size='sm' placeholder='Role' label="Select Role" isRequired>
+                                    <Select size='sm' placeholder='Role' label="Select Role" isRequired aria-label="Role Selection">
                                         <SelectItem>Chief Executive Officer (CEO)</SelectItem>
                                         <SelectItem>Product Manager</SelectItem>
                                         <SelectItem>Software Engineer</SelectItem>
