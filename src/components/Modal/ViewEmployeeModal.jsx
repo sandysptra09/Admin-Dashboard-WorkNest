@@ -54,7 +54,7 @@ export default function ViewEmployeeModal() {
                                 <div className='flex flex-col gap-6'>
                                     <div className='flex flex-row gap-6'>
                                         <div className='w-full flex gap-4'>
-                                            <Avatar className="w-20 h-20 text-large" src="https://i.pinimg.com/736x/a4/8f/7b/a48f7b8c75dcf005195f078491eb5045.jpg" />
+                                            <Avatar className="w-20 h-20 text-large" src="https://lenox-pasifik.co.id/wp-content/uploads/2016/06/team-1-640x640.jpg" />
                                             <div className='flex flex-col gap-2 items-start'>
                                                 <h3 className='text-base font-semibold text-[#1b254b]'>John Doe</h3>
                                                 <span className='text-sm text-gray-500 font-semibold'>Software Engineer</span>

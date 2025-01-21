@@ -53,7 +53,7 @@ export default function AddEmployeeModal() {
                                     </Select>
                                     <Input size='sm' label="Birth Place" placeholder="Enter Birth Place" type="text" isRequired />
                                     <DatePicker size='sm' className="w-full" label="Enter Birth date" isRequired />
-                                    <Input size='sm' label="Phone" placeholder="Enter Phone Number" type="number" isRequired />
+                                    <Input size='sm' label="Phone" placeholder="Enter Phone Number" type="text" isRequired />
                                     <Select size='sm' placeholder='Select Religion' label="Religion" isRequired>
                                         <SelectItem>Islam</SelectItem>
                                         <SelectItem>Christian</SelectItem>
@@ -89,6 +89,7 @@ export default function AddEmployeeModal() {
 
                                     />
                                     <Textarea className="w-full" label="Address" placeholder="Enter Address" isRequired />
+                                    <Input size='sm' label="Email" placeholder="Enter Email Address" type="email" isRequired />
 
                                 </form>
                             </ModalBody>

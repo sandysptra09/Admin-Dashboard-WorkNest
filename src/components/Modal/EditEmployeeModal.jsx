@@ -132,6 +132,7 @@ export default function EditEmployeeModal() {
 
                                     />
                                     <Textarea className="w-full" label="Address" defaultValue='Jl. Cibaduyut Indah No. 17 Blok F' isRequired />
+                                    <Input size='sm' label="Email" defaultValue='johndoework@employee.nest' type="email" isRequired />
 
                                 </form>
                             </ModalBody>

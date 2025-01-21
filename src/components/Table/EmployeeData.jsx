@@ -69,7 +69,7 @@ export default function EmployeeData() {
                             <TableCell>johndoe@employee.nest</TableCell>
                             <TableCell>+6281141321889</TableCell>
                             <TableCell>
-                                <div className="relative flex items-center gap-2">
+                                <div className="relative flex items-center">
                                     <ViewEmployeeModal />
                                     <EditEmployeeModal />
                                     <DeleteEmployeeModal />

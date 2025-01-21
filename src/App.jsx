@@ -1,4 +1,5 @@
 import React from 'react'
+import './module/gblobal.module.scss'
 import { NextUIProvider } from '@nextui-org/react'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 
