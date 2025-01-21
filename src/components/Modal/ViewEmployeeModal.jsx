@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { parseDate, getLocalTimeZone } from '@internationalized/date'
 
 // import from nextui
-import { Button, Tooltip } from '@nextui-org/react'
+import { Button, Tooltip, Avatar } from '@nextui-org/react'
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure, Input } from '@nextui-org/react'
-import { Select, SelectItem, DatePicker, Textarea } from '@nextui-org/react'
 
 // import icon
 import { AddEmployee } from '../Button/IconsButton'
@@ -51,15 +50,81 @@ export default function ViewEmployeeModal() {
                     {(onClose) => (
                         <>
                             <ModalHeader className="flex flex-col gap-1">Detail Information</ModalHeader>
-                            <ModalBody className='flex flex-col gap-1'>
+                            <ModalBody className='m-4 flex flex-col gap-1'>
+                                <div className='flex flex-col gap-6'>
+                                    <div className='flex flex-row gap-6'>
+                                        <div className='w-full flex gap-4'>
+                                            <Avatar className="w-20 h-20 text-large" src="https://i.pinimg.com/736x/a4/8f/7b/a48f7b8c75dcf005195f078491eb5045.jpg" />
+                                            <div className='flex flex-col gap-2 items-start'>
+                                                <h3 className='text-base font-semibold text-[#1b254b]'>John Doe</h3>
+                                                <span className='text-sm text-gray-500 font-semibold'>Software Engineer</span>
+                                                <span className='text-xs text-gray-500'>Jl. Cibaduyut Indah No. 17 Blok F</span>
+                                            </div>
+                                        </div>
+                                    </div>
 
+                                    <div className="">
+                                        <div className="flex justify-between items-center">
+                                            <h4 className="text-sm font-semibold text-[#1b254b]">Personal Information</h4>
+                                        </div>
+                                        <div className="grid grid-cols-2 gap-4 mt-4">
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">NIP</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">20061228-0001</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">NIK</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">3201122800010001</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Name</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">John Doe</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Departmen</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Frontend Developer</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Gender</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Male</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Marital Status</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Single</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Birth Place</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Bandung</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Birth date</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">06/12/2006</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Phone</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">+62 8145 346 46</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Religion</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Christian</p>
+                                            </div>
+                                            <div className="flex flex-col gap-1">
+                                                <p className="text-sm text-gray-500">Single</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">Jl. Cibaduyut Indah No. 17 Blok F</p>
+                                            </div>
+                                            <div className='flex flex-col gap-1'>
+                                                <p className="text-sm text-gray-500">Email Address</p>
+                                                <p className="text-sm font-medium text-[#1b254b]">johndoework@employee.nest</p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
                             </ModalBody>
                             <ModalFooter>
-                                <Button color="danger" variant="light" onPress={onClose}>
-                                    Cancel
-                                </Button>
                                 <Button color="primary" onPress={onClose}>
-                                    Update
+                                    OK
                                 </Button>
                             </ModalFooter>
                         </>

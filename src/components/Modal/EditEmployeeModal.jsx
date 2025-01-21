@@ -94,7 +94,7 @@ export default function EditEmployeeModal() {
                                         <SelectItem>Female</SelectItem>
                                     </Select>
                                     <Input size='sm' label="Birth Place" defaultValue='Bandung' type="text" isRequired />
-                                    <DatePicker size='sm' className="w-full" label="Enter Birth date" value={value} onChange={setValue} isRequired />
+                                    <DatePicker size='sm' className="w-full" label="Birth date" value={value} onChange={setValue} isRequired />
                                     <Input size='sm' label="Phone" defaultValue='+6281141321889' type="text" isRequired />
                                     <Select size='sm' defaultSelectedKeys={['chr']} label="Religion" isRequired>
                                         <SelectItem>Islam</SelectItem>
