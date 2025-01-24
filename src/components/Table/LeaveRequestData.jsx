@@ -6,6 +6,7 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Toolti
 
 // import react-icons
 import { GoInfo } from "react-icons/go";
+import ViewRequestModal from '../Modal/ViewRequestModal';
 
 export default function LeaveRequestData() {
     return (
@@ -38,11 +39,11 @@ export default function LeaveRequestData() {
                                 04/04/2024
                             </TableCell>
                             <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
-                            <TableCell className='whitespace-nowrap'><Tooltip content="Manage">
-                                <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                                    <GoInfo />
-                                </span>
-                            </Tooltip></TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                <div className='relative flex items-center'>
+                                    <ViewRequestModal />
+                                </div>
+                            </TableCell>
 
                         </TableRow>
                         <TableRow key="2">
@@ -62,11 +63,11 @@ export default function LeaveRequestData() {
                                 04/04/2024
                             </TableCell>
                             <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
-                            <TableCell className='whitespace-nowrap'><Tooltip content="Manage">
-                                <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                                    <GoInfo />
-                                </span>
-                            </Tooltip></TableCell>
+                            <TableCell className='whitespace-nowrap'>
+                                <div className='relative flex items-center'>
+                                    <ViewRequestModal />
+                                </div>
+                            </TableCell>
                         </TableRow>
 
                         <TableRow key="3">
@@ -87,11 +88,9 @@ export default function LeaveRequestData() {
                             </TableCell>
                             <TableCell className='whitespace-nowrap'>04/04/2024</TableCell>
                             <TableCell className='whitespace-nowrap'>
-                                <Tooltip content="Manage">
-                                    <span className="text-lg text-default-400 cursor-pointer active:opacity-50">
-                                        <GoInfo />
-                                    </span>
-                                </Tooltip>
+                                <div className='relative flex items-center'>
+                                    <ViewRequestModal />
+                                </div>
                             </TableCell>
                         </TableRow>
                     </TableBody>
