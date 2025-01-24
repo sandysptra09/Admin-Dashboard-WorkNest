@@ -61,20 +61,22 @@ export default function DeleteEmployeeModal() {
                     </span>
                 </Tooltip>
             </Button>
-            <Modal size='3xl' isOpen={isOpen} onOpenChange={onOpenChange}>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Detail Information</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">Are you sure?</ModalHeader>
                             <ModalBody className='flex flex-col gap-1'>
-
+                                <p className='text-[15px]'>
+                                    Do you really want to Are you sure you want to delete this employee? This action cannot be undone.
+                                </p>
                             </ModalBody>
                             <ModalFooter>
-                                <Button color="danger" variant="light" onPress={onClose}>
+                                <Button color="primary" variant="light" onPress={onClose}>
                                     Cancel
                                 </Button>
-                                <Button color="primary" onPress={onClose}>
-                                    Update
+                                <Button color="danger" onPress={onClose}>
+                                    Delete
                                 </Button>
                             </ModalFooter>
                         </>

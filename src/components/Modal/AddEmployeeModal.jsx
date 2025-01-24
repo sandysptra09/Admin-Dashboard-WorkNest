@@ -122,7 +122,6 @@ export default function AddEmployeeModal() {
                 </ModalContent>
             </Modal>
 
-            {/* Confirmation Modal */}
             <Modal isOpen={isConfirmOpen} onOpenChange={onConfirmOpenChange}>
                 <ModalContent>
                     {(onClose) => (
