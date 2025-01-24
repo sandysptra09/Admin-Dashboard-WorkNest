@@ -13,9 +13,25 @@ export default function AddEmployeeModal() {
     // initialize the modal 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
+    // initialize confirm modal
+    const { isOpen: isConfirmOpen, onOpen: onConfirmOpen, onOpenChange: onConfirmOpenChange } = useDisclosure();
+
     // initialize password visibility
     const [isVisible, setIsVisible] = useState(false);
     const toggleVisibility = () => setIsVisible(!isVisible);
+
+    // handle form submission
+    const handleSubmit = () => {
+        // open confirmation modal
+        onConfirmOpen();
+    };
+
+    const handleConfirmSubmit = () => {
+        onConfirmOpenChange(false);
+        onOpenChange(false);
+
+        console.log("Employee added successfully!");
+    };
 
     return (
         <>
@@ -66,6 +82,9 @@ export default function AddEmployeeModal() {
                                         <SelectItem>Married</SelectItem>
                                         <SelectItem>Divorced</SelectItem>
                                     </Select>
+                                    <Input size='sm' label="Email" placeholder="Enter Email Address" type="email" isRequired />
+
+                                    <Textarea className="w-full" label="Address" placeholder="Enter Address" isRequired />
                                     <Input size='sm'
                                         className="w-full"
                                         isRequired
@@ -88,16 +107,13 @@ export default function AddEmployeeModal() {
                                         type={isVisible ? "text" : "password"}
 
                                     />
-                                    <Textarea className="w-full" label="Address" placeholder="Enter Address" isRequired />
-                                    <Input size='sm' label="Email" placeholder="Enter Email Address" type="email" isRequired />
-
                                 </form>
                             </ModalBody>
                             <ModalFooter>
                                 <Button color="danger" variant="light" onPress={onClose}>
                                     Close
                                 </Button>
-                                <Button color="primary" onPress={onClose}>
+                                <Button color="primary" onPress={handleSubmit}>
                                     Submit
                                 </Button>
                             </ModalFooter>
@@ -105,7 +121,30 @@ export default function AddEmployeeModal() {
                     )}
                 </ModalContent>
             </Modal>
-        </>
 
-    )
+            {/* Confirmation Modal */}
+            <Modal isOpen={isConfirmOpen} onOpenChange={onConfirmOpenChange}>
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader>Confirmation</ModalHeader>
+                            <ModalBody>
+                                <p className='text-[15px]'>
+                                    Do you want to finalize and add this employee to the records?
+                                </p>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="danger" variant="light" onPress={onClose}>
+                                    Cancel
+                                </Button>
+                                <Button color="primary" onPress={handleConfirmSubmit}>
+                                    Confirm
+                                </Button>
+                            </ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
+        </>
+    );
 }

@@ -13,6 +13,7 @@ import { EyeSlashFilledIcon, EyeFilledIcon, ViewIcon, EditIcon } from './IconDro
 export default function EditEmployeeModal() {
     // initialize the modal 
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
+    const { isOpen: isConfirmOpen, onOpen: onConfirmOpen, onOpenChange: onConfirmOpenChange } = useDisclosure();
 
     // initialize password visibility
     const [isVisible, setIsVisible] = useState(false);
@@ -20,6 +21,20 @@ export default function EditEmployeeModal() {
 
     // initialize value date
     const [value, setValue] = useState(parseDate('2006-06-12'))
+
+    // handle form submission
+    const handleSubmit = () => {
+        // open confirmation modal
+        onConfirmOpen();
+    };
+
+    const handleUpdate = () => {
+        onConfirmOpenChange(false);
+        onOpenChange(false);
+
+        console.log('Employee information updated.');
+    };
+
 
     return (
 
@@ -108,6 +123,9 @@ export default function EditEmployeeModal() {
                                         <SelectItem>Married</SelectItem>
                                         <SelectItem>Divorced</SelectItem>
                                     </Select>
+                                    <Input size='sm' label="Email" defaultValue='johndoework@employee.nest' type="email" isRequired />
+
+                                    <Textarea className="w-full" label="Address" defaultValue='Jl. Cibaduyut Indah No. 17 Blok F' isRequired />
                                     <Input size='sm'
                                         className="w-full"
                                         defaultValue='johndoe123'
@@ -131,8 +149,6 @@ export default function EditEmployeeModal() {
                                         type={isVisible ? "text" : "password"}
 
                                     />
-                                    <Textarea className="w-full" label="Address" defaultValue='Jl. Cibaduyut Indah No. 17 Blok F' isRequired />
-                                    <Input size='sm' label="Email" defaultValue='johndoework@employee.nest' type="email" isRequired />
 
                                 </form>
                             </ModalBody>
@@ -140,8 +156,31 @@ export default function EditEmployeeModal() {
                                 <Button color="danger" variant="light" onPress={onClose}>
                                     Cancel
                                 </Button>
-                                <Button color="primary" onPress={onClose}>
+                                <Button color="primary" onPress={onConfirmOpen}>
                                     Update
+                                </Button>
+                            </ModalFooter>
+                        </>
+                    )}
+                </ModalContent>
+            </Modal>
+
+            <Modal isOpen={isConfirmOpen} onOpenChange={onConfirmOpenChange}>
+                <ModalContent>
+                    {(onClose) => (
+                        <>
+                            <ModalHeader>Confirm Update</ModalHeader>
+                            <ModalBody>
+                                <p className='text-[15px]'>
+                                    Are you sure you want to update this employee's information?
+                                </p>
+                            </ModalBody>
+                            <ModalFooter>
+                                <Button color="danger" variant="light" onPress={onClose}>
+                                    Cancel
+                                </Button>
+                                <Button color="primary" onPress={handleUpdate}>
+                                    Yes, Update
                                 </Button>
                             </ModalFooter>
                         </>
