@@ -28,6 +28,7 @@ export default function EditEmployeeModal() {
         onConfirmOpen();
     };
 
+    // handle update
     const handleUpdate = () => {
         onConfirmOpenChange(false);
         onOpenChange(false);

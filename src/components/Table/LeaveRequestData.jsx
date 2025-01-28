@@ -6,7 +6,10 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Toolti
 
 // import react-icons
 import { GoInfo } from "react-icons/go";
+
+// import from other components
 import ViewRequestModal from '../Modal/ViewRequestModal';
+import ManageRequestModal from '../Modal/ManageRequestModal';
 
 export default function LeaveRequestData() {
     return (
@@ -42,6 +45,7 @@ export default function LeaveRequestData() {
                             <TableCell className='whitespace-nowrap'>
                                 <div className='relative flex items-center'>
                                     <ViewRequestModal />
+                                    <ManageRequestModal />
                                 </div>
                             </TableCell>
 
