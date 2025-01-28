@@ -49,7 +49,7 @@ export default function ManageRequestModal() {
                 <ModalContent>
                     {(onClose) => (
                         <>
-                            <ModalHeader className="flex flex-col gap-1">Leave Request Details</ModalHeader>
+                            <ModalHeader className="flex flex-col gap-1">Manage Leave Request</ModalHeader>
                             <ModalBody className="flex flex-col gap-4">
                                 <div className="flex items-center gap-3 mb-2">
                                     <Avatar src="https://lenox-pasifik.co.id/wp-content/uploads/2016/06/team-1-640x640.jpg" alt="Employee Avatar" size="lg" />

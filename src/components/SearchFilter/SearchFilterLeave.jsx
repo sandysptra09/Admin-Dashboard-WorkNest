@@ -4,11 +4,8 @@ import React from 'react'
 import {
     Input,
     Button,
-    Dropdown,
-    DropdownTrigger,
-    DropdownMenu,
-    DropdownSection,
-    DropdownItem
+    Select,
+    SelectItem
 } from '@nextui-org/react'
 
 // import icons
@@ -25,22 +22,12 @@ export default function SearchFilterLeave() {
                 startContent={<SearchBy />}
             />
 
-            <div className='flex gap-3'>
-                <Dropdown>
-                    <DropdownTrigger className="hidden sm:flex">
-                        <Button size='sm' className="px-4 py-2 text-sm bg-slate-100"
-                            endContent={<DropDownByRole className="text-small" />} variant="flat">
-                            Type
-                        </Button>
-                    </DropdownTrigger>
-                    <DropdownMenu
-                        disallowEmptySelection
-                        aria-label="Table Columns"
-                        closeOnSelect={false}
-                        selectionMode="multiple"
-                    >
-                    </DropdownMenu>
-                </Dropdown>
+            <div className='flex gap-3 w-48'>
+                <Select size='sm' placeholder='Type' aria-label="Filter by Type">
+                    <SelectItem>Annual</SelectItem>
+                    <SelectItem>Vacation</SelectItem>
+                    <SelectItem>Sick</SelectItem>
+                </Select>
             </div>
 
 
